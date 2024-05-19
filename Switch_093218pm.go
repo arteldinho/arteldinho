@@ -1,18 +1,19 @@
-package main
-
-import "fmt"
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
+    now := time.Now()
 
-    switch time.Now(08.00).Weekday(09.00) {
+    switch now.Weekday() {
     case time.Saturday, time.Sunday:
         fmt.Println("It's the weekend")
     default:
         fmt.Println("It's a weekday")
     }
 
-    t := time.Now(08.00.)
+    t := time.Now()
     switch {
     case t.Hour() < 12:
         fmt.Println("It's before noon")
